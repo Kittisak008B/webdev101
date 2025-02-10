@@ -5,33 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Document</title>
+    <style>
+        /* css */
+        @font-face {
+            font-family: ubuntu;
+            src: url(./Ubuntu_font/Ubuntu-Italic.ttf);
+        }
+        body {
+            font-family: ubuntu;
+        }
+        .container {
+            width: 100%;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(246, 186, 58);
+            padding: 20px;
+        }
+        .header {
+            font-size: 30px;
+            text-align: center;
+        }
+        .header-form {
+            width: 100px;
+        }
+        .flex {
+            display: flex;
+        }
+        .form-input {
+            margin-bottom: 10px;
+        }
+        input.form , textarea {
+            border: 1px gainsboro solid;
+            width: 100%;
+        }
+        .center {
+            text-align: center;
+        }
+        .button {
+            border: 0;
+            width: 20%;
+            height: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #ed4b10;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
 </head>
 <body>
     <!-- <body>: contains the actual content that is displayed on the webpage -->
-    <h1>Registration Form</h1>
-    <div>First name: <input name="firstname" type="text"></div>
-    <div>Last name: <input name="lastname:" type="text"></div>
-    <div>Age: <input name="age" type="number" min="0" max="100"></div>
-    <div>
-        Gender:
-        <div><input name="gender" type="radio" value="Male"> Male</div>
-        <div><input name="gender" type="radio" value="FeMale"> FeMale</div>
-        <div><input name="gender" type="radio" value="Not specified"> Not specified</div>
+    <div class="container">
+        <div class="header form-input">Registration Form</div>
+
+        <div class="flex form-input">
+            <div class="header-form">First name:</div> <input class="form" name="firstname" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">Last name:</div> <input class="form" name="lastname:" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">Age:</div> <input class="form" name="age" type="number" min="0" max="100">
+        </div>
+
+        <div class="form-input">
+            Gender:
+            <div><input name="gender" type="radio" value="Male"> Male</div>
+            <div><input name="gender" type="radio" value="FeMale"> FeMale</div>
+            <div><input name="gender" type="radio" value="Not specified"> Not specified</div>
+        </div>
+        <div class="form-input">
+            Interests:
+            <div><input name="interest" type="checkbox" value="Video Games"> Video Games</div>
+            <div><input name="interest" type="checkbox" value="Books"> Books</div>
+            <div><input name="interest" type="checkbox" value="Investing"> Investing</div>
+            <div><input name="interest" type="checkbox" value="Politics"> Politics</div>
+        </div>
+        <div class="form-input">
+            Additional Description:
+            <div><textarea name="description"></textarea></div>
+        </div>
+        <div class="form-input center">
+            <a href="https://google.com" target="_blank">Terms & Conditions</a>
+        </div>
+        <div class="form-input center">
+            <button class="button" onclick="submitData()">Submit</button>
+        </div>
+        <div class="center">
+            <img src="https://picsum.photos/400/300" alt="Random Image">
+        </div>
     </div>
-    <div>
-        Interests:
-        <div><input name="interest" type="checkbox" value="Video Games"> Video Games</div>
-        <div><input name="interest" type="checkbox" value="Books"> Books</div>
-        <div><input name="interest" type="checkbox" value="Investing"> Investing</div>
-        <div><input name="interest" type="checkbox" value="Politics"> Politics</div>
-    </div>
-    <div>
-        Additional Description:
-        <div><textarea name="description"></textarea></div>
-    </div>
-    <div><a href="https://google.com" target="_blank">Terms & Conditions</a></div>
-    <div><button type="submit">Submit</button></div>
-    <div><img src="https://picsum.photos/400/300" alt="Random Image"></div>
 
 </body>
 </html>
