@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <head>: contains metadata about the document for the browser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Document</title>
+    <!-- import styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <body>: contains the actual content that is displayed on the webpage -->
+    <a href="users.html" class="manage-link">go to user management</a>
+
+    <div class="container">
+        <div class="header form-input">Registration Form</div>
+
+        <div class="flex form-input">
+            <div class="header-form">First name:</div> <input class="form" name="firstname" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">Last name:</div> <input class="form" name="lastname" type="text">
+        </div>
+        <div class="flex form-input">
+            <div class="header-form">Age:</div> <input class="form" name="age" type="number" min="0" max="100">
+        </div>
+
+        <div class="form-input">
+            Gender:
+            <div><input name="gender" type="radio" value="Male"> Male</div>
+            <div><input name="gender" type="radio" value="Female"> Female</div>
+            <div><input name="gender" type="radio" value="Other"> Other</div>
+        </div>
+        <div class="form-input">
+            Interests:
+            <div><input name="interest" type="checkbox" value="Video Games"> Video Games</div>
+            <div><input name="interest" type="checkbox" value="Books"> Books</div>
+            <div><input name="interest" type="checkbox" value="Investing"> Investing</div>
+            <div><input name="interest" type="checkbox" value="Politics"> Politics</div>
+        </div>
+        <div class="form-input">
+            Additional Description:
+            <div><textarea name="description"></textarea></div>
+        </div>
+        <div class="form-input center">
+            <a href="https://google.com" target="_blank">Terms & Conditions</a>
+        </div>
+
+        <div id="response-message" class="message"></div>
+
+        <div class="form-input center">
+            <button class="button" onclick="submitData()">Submit</button>
+        </div>
+        <div class="center">
+            <img src="https://picsum.photos/400/300" alt="Random Image">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- script axios -->
+    <script src="index.js"></script>
+
+</body>
+</html>
