@@ -102,12 +102,12 @@ const submitData = async () => {
         }
         //validate
         const errors = validateData(userData)
-        let successText = 'Form submission successful !'
         if (errors.length > 0) {
             throw {message: 'Incomplete information entered', errors: errors}
         }
-
+        
         console.log('submit data', userData)
+        let successText = 'Form submission successful !'
         if (mode == 'EDIT'){
             const response = await axios.put(`${BASE_URL}/users/${selectedId}`, userData) //update a specific user by id 
             console.log('response data', response.data)
@@ -116,7 +116,6 @@ const submitData = async () => {
             const response = await axios.post(`${BASE_URL}/users`, userData) //create a new user
             console.log('response data', response.data)
         }
-
         responseMessageDOM.innerText = successText
         responseMessageDOM.className = 'message success'
 
